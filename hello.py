@@ -25,6 +25,14 @@ def show_post(post_id):
 def show_post2(post_id):
     return 'Post %d' % 13
 
+@app.route('/projects/')
+def projects():
+    return 'A página do projeto'
+
+@app.route('/sobre')
+def sobre():
+    return 'A página sobre'
+
 if __name__ == '__main__':
     app.run(debug=True)
 
