@@ -5,6 +5,11 @@ app = Flask(__name__)
 def index():
     return 'Você está na página principal.'
 
-@app.route('/login')
+@app.route('/nome')
 def login():
-    return input('Digite seu login: ')
+    return input('Digite seu nome: ')
+
+@app.route('/user/<Cesar>')
+def profile(Cesar):
+    return input('Digite seu username: ')
+
