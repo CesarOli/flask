@@ -5,3 +5,6 @@ app = Flask(__name__)
 def index():
     return 'Você está na página principal.'
 
+@app.route('/login')
+def login():
+    return input('Digite seu login: ')
