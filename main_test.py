@@ -9,9 +9,17 @@ def index():
 def login():
     return input('Digite seu login: ')
 
-@app.route('/profile/<Cesar>')
-def profile(Cesar):
+@app.route('/profile/<profile>')
+def profile():
     return input('Digite seu profile: ')
+
+# revisar com o Fernando esta parte
+with app.test_request_context():
+    print (url_for('index'))
+    print (url_for('login'))
+    print (url_for('login', next = '/'))
+    print (url_for('profile', profile = 'John Doe' ))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
