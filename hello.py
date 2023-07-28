@@ -13,14 +13,6 @@ def hello():
 def teste():
     return 'Testando Flask'
 
-@app.route('/projects/')
-def projects():
-    return 'A página do projeto'
-
-@app.route('/sobre')
-def sobre():
-    return 'A página sobre'
-
 if __name__ == '__main__':
     app.run(debug=True)
 
