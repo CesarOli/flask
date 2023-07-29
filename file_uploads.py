@@ -1,6 +1,5 @@
-from flask import request
-from flask import Flask
-from werkzeug import secure_filename
+from flask import request, Flask, render_template
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
@@ -8,9 +7,14 @@ app = Flask(__name__)
 def upload_file():
     if request.method == 'POST':
         f = request.files['the_file']
-        f.save('/var/www/uploads/' + secure_filename(f.filename))
-        
+        if f:
+            f.save('/projetos2/flask/venv-flask/' + secure_filename(f.teste.txt))
+            return 'Arquivo enviado com sucesso!!'
+        else:
+            return 'Nenhum arquivo enviado'
+    return render_template('teste.txt')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
