@@ -16,7 +16,7 @@ def login():
         else:
             error = 'Invalid username/password'
 
-        return render_template('login.html', error=error)
+    return render_template('hello.html', error=error)
     
 
 if __name__ == '__main__':
