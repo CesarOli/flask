@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, make_response
 app = Flask(__name__)
 
 '''@app.route('/')
@@ -8,7 +8,7 @@ def index():
 
 @app.route('/')
 def index():
-    resp = make_response(render_template())
+    resp = make_response(render_template('hello.html'))
     resp.set_cookie('username', 'the username')
     return resp
 
