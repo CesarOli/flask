@@ -13,8 +13,6 @@ Requisitos
 versão 3+ do Python instalado
 
 
-
-
 Instalação
 ----------
 seguir este link para completar a instalação da ferramenta.
