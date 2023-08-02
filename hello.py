@@ -5,19 +5,19 @@ app = Flask(__name__)
 def index():
     return 'Index Page'
 
-@app.route('/hello')
+@app.route('/hello/')
 def hello():
     return 'Hello World!'
 
-@app.route('/teste')
+@app.route('/teste/')
 def teste():
     return 'Testando Flask'
 
-@app.route('/projects/')
+@app.route('/projects')
 def projects():
     return 'A página do projeto'
 
-@app.route('/sobre')
+@app.route('/sobre/')
 def sobre():
     return 'A página sobre'
 
