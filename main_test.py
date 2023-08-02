@@ -5,20 +5,21 @@ app = Flask(__name__)
 def index():
     return 'Você está na página principal.'
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return input('Digite seu login: ')
+    return url_for('static', filename='testta.txt')
 
-@app.route('/profile/<profile>')
-def profile(profile):
-    return input('Digite seu profile: ')
+@app.route('/profile/<profilename>')
+def profile(profilename):
+    print (url_for('login', next = '/'))
+    return profilename
 
 # revisar com o Fernando esta parte
 with app.test_request_context():
     print (url_for('index'))
     print (url_for('login'))
     print (url_for('login', next = '/'))
-    print (url_for('profile', profile = 'César' ))
+    print (url_for('profile', profilename = 'César' ))
 
 
 if __name__ == '__main__':
