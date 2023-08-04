@@ -7,4 +7,4 @@ def hello(user):
         return "Processando seu login...Por favor, aguarde!!"
     else:
         idade = request.args['idade']
-                
+        sexo = request.args['sexo']        
