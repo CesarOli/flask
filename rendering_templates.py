@@ -5,3 +5,6 @@ app = Flask(__name__)
 def hello(user):
     if request.methods == 'POST':
         return "Processando seu login...Por favor, aguarde!!"
+    else:
+        idade = request.args['idade']
+                
