@@ -15,3 +15,6 @@ def hello(user):
                            data=date.today(), 
                            name=user,
                            caminho=url_for('static',filename='teste.txt'))
+if __name__=='__main__':
+    app.run(debug=True)
+    
