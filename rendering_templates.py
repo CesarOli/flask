@@ -9,3 +9,9 @@ def hello(user):
         idade = request.args['idade']
         sexo = request.args['sexo']
         bairro = request.args['bairro']
+
+        return idade + ' ' + sexo + ' ' + bairro
+        return render_template('hello.html',
+                           data=date.today(), 
+                           name=user,
+                           caminho=url_for('static',filename='teste.txt'))
