@@ -1,4 +1,5 @@
-from flask import Flask, request
+from flask import Flask, request, render_template, url_for
+from datetime import date
 
 app = Flask(__name__)
 @app.route('/hello/<user>', method=['POST', 'GET'])
@@ -17,4 +18,4 @@ def hello(user):
                            caminho=url_for('static',filename='teste.txt'))
 if __name__=='__main__':
     app.run(debug=True)
-    
+
