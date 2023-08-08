@@ -21,6 +21,9 @@ def projects():
 def sobre():
     return 'A página sobre'
 
+@app.route('/barbearia/')
+def home():
+    return 'Entre em contato conosco.'
 if __name__ == '__main__':
     app.run(debug=True)
 
