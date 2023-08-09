@@ -16,6 +16,7 @@ versão 3+ do Python instalado
 Instalação
 ----------
 seguir este link para completar a instalação da ferramenta.
+https://flask-ptbr.readthedocs.io/en/latest/
 https://flask-ptbr.readthedocs.io/en/latest/installation.html#installation
 
 
