@@ -2,9 +2,9 @@ from flask import Flask, request, render_template, url_for
 from datetime import date
 
 app = Flask(__name__)
-@app.route('/hello/<user>', method=['POST', 'GET'])
+@app.route('/hello/<user>', methods=['POST', 'GET'])
 def hello(user):
-    if request.methods == 'POST':
+    if request.method == 'POST':
         return "Processando seu login...Por favor, aguarde!!"
     else:
         idade = request.args['idade']
