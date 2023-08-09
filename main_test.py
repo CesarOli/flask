@@ -7,7 +7,15 @@ def index():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    return url_for('static', filename='testta.txt')
+    #tentei retornar o conteúdo do arquivo .txt
+    return url_for('static', filename='teste.txt')
+
+'''@app.route('/login', methods=['GET', 'POST'])
+def login():
+    with open('static/teste.txt', 'r') as file:
+        content = file.read()
+    return content
+'''
 
 @app.route('/profile/<profilename>')
 def profile(profilename):
