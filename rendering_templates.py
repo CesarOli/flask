@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/hello/<user>', methods=['POST', 'GET'])
 def hello(user):
     if request.method == 'POST':
-        return "Processando seu login...Por favor, aguarde!!"
+        return "Processando seu login, as frutas são: " + request.form['idade']
     else:
         idade = request.args['idade']
         sexo = request.args['sexo']
