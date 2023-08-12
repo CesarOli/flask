@@ -2,10 +2,17 @@ from flask import Flask, request, render_template, url_for
 from datetime import date
 
 app = Flask(__name__)
+@app.route('/login', methods= ['POST', 'GET'])
+def login(login):
+    if request.method == 'POST':
+        return ''
+    else:
+        
+    
 @app.route('/hello/<user>', methods=['POST', 'GET'])
 def hello(user):
     if request.method == 'POST':
-        return "Processando seu login, as frutas são: " + request.form['idade'] + request.form['sexo'] + request.form['bairro']
+        return "Processando seu login, seus dados são: " + request.form['idade'] + request.form['sexo'] + request.form['bairro']
     else:
         idade = request.args['idade']
         sexo = request.args['sexo']
