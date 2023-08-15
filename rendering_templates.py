@@ -9,7 +9,13 @@ def login():
     else:
         return 'O Método não foi requisitado'
         '''
+@app.route('/faleconosco', methods=('POST', 'GET'))
+def faleconosco():
+    if request.method == 'GET':
+        return 'Ligue para 0800 020 42000.'
     
+        
+
     
 @app.route('/hello/<user>', methods=['POST', 'GET'])
 def hello(user):
