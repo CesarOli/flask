@@ -14,8 +14,9 @@ def faleconosco():
     if request.method == 'GET':
         return 'Ligue para 0800 020 42000.'
     
-        
-
+    elif request.method == 'POST':
+        return request.form['idade'] + request.form['sexo'] + request.form['bairro']
+    
     
 @app.route('/hello/<user>', methods=['POST', 'GET'])
 def hello(user):
