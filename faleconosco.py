@@ -8,5 +8,5 @@ def contact_us():
         return render_template('faleconosco.html')
 
     else:
-        return
+        return request.form['sugestoes']
     
