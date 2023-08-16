@@ -4,8 +4,9 @@ app = Flask(__name__)
 
 @app.route('/faleconosco/', methods= ['GET', 'POST'])
 def contact_us():
-    if:
-        return
+    if request.method == 'POST':
+        return render_template('faleconosco.html')
+
     else:
         return
     
