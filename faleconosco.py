@@ -13,3 +13,9 @@ def contact_us():
 
 if __name__=='__main__':
     app.run(debug=True)
+
+#criar label
+#garantir o preenchimentos de ambos os campos do formulário.
+#garantir que a rota aceite a requisição somente com o preenchimento dos dois campos 
+#campos sugestões e email
+#retornar mensagem de sucesso para o usuário, + email cadastrado.
