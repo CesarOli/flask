@@ -7,6 +7,9 @@ def contact_us():
     if request.method == 'POST':
         return render_template('faleconosco.html')
 
-    else:
+    elif request.method == 'GET':
         return request.form['sugestoes']
     
+
+if __name__=='__main__':
+    app.run(debug=True)
