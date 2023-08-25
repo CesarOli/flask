@@ -8,7 +8,7 @@ def contact_us():
         return render_template('faleconosco.html')
 
     else:
-        return request.form['sugestoes']
+        return 'Mensagem enviada com sucesso!!!'
     
 
 if __name__=='__main__':
