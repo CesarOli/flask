@@ -8,9 +8,7 @@ def contact_us():
         return render_template('faleconosco.html')
 
     else:
-        return 'Mensagem enviada com sucesso!!!'
-    
-
+        return render_template('faleconosco.html')
 if __name__=='__main__':
     app.run(debug=True)
 
@@ -19,3 +17,5 @@ if __name__=='__main__':
 #garantir que a rota aceite a requisição somente com o preenchimento dos dois campos 
 #campos sugestões e email
 #retornar mensagem de sucesso para o usuário, + email cadastrado.
+# não dispensar os dados enviados 'email' e 'sugestões'
+# colocar 'Fale Conosco' 
