@@ -1,9 +1,21 @@
 <!doctype html>
 <title>Fale Conosco</title>
-<h4>Nosso Telefone: 5544-6699</h4>
-<h4>Nosso Email: contato@faleconosco.com.br</h4>
-<form action="" method="post">
-    <label> <input type="text"placeholder="Informe seu email:" required/></label><br></br>
-    <label> <input type="text"placeholder="Sugestões:" required/></label>
-    <p><input type=submit value=Enviar>
-</form> 
+<h1>Fale Conosco</h1>
+{% if request.method == 'GET' %}
+    <h4>Nosso Telefone: 5544-6699</h4>
+    <h4>Nosso Email: contato@faleconosco.com.br</h4>
+    <form action="" method="post">
+        <label> <input type="text" name="email" placeholder="Informe seu email:" required/></label><br></br>
+        <label> <input type="text" name="sugestao" placeholder="Sugestões:" required/></label>
+        <p><input type=submit value=Enviar>
+    </form> 
+{% elif request.method == 'POST' %}
+    <h5>mensagem enviada com sucesso! Retornaremos no {{ request.form['email'] }} em três dias!!</h5>
+{% endif %}
+
+    {% if request,method == 'POST' %}
+        <h3>Agradeçemos o seu contato. Obrigado!!</h3>
+        <form action="" method="post"
+            <p><input type="submit" value="Fechar">
+        </form>
+    {% endif %}
